@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Table</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+        .flex-table {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+        .flex-header, .flex-row {
+            display: flex;
+        }
+        .flex-header {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .flex-row:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .flex-cell {
+            flex: 1;
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .flex-row:hover {
+            background-color: #e9e9e9;
+        }
+        .flex-header .flex-cell {
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="flex-table">
+    <div class="flex-header">
+        <div class="flex-cell" colspan="3">This is a Table</div>
+    </div>
+    <div class="flex-row">
+        <div class="flex-cell">1</div>
+        <div class="flex-cell">2</div>
+        <div class="flex-cell">3</div>
+    </div>
+    <div class="flex-row">
+        <div class="flex-cell">4</div>
+        <div class="flex-cell">5</div>
+        <div class="flex-cell">6</div>
+    </div>
+</div>
+</body>
+</html>
