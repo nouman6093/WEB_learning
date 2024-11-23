@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" action="3.html">
+        <label>Email: </label>
+        <input type="text" placeholder="Enter Email" id="mail">
+        <input type="submit" value="Submit" id="submit">
+    </form>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById("submit").addEventListener("click", function (e) {
+           e.preventDefault();
+
+           let regex = /^[a-zA-Z0-9._-]+@[a-z]+\.[a-z]/;
+
+           if (regex.test(document.getElementById("mail").value)) {
+               document.getElementById("result").textContent = "${mail} is correct";
+           } else {
+               document.getElementById("result").textContent = "${mail} is not correct"
+           }
+        });
+    </script>
+</body>
+</html>
